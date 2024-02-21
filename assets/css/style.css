@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: 400;
   src: local("Roboto Regular"),
-    url("/assets/fonts/Roboto-Regular.ttf") format("truetype");
+    url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -12,7 +12,7 @@
   font-style: normal;
   font-weight: 700;
   src: local("Roboto Bold"),
-    url("/assets/fonts/Roboto-Bold.ttf") format("truetype");
+    url("./assets/fonts/Roboto-Bold.ttf") format("truetype");
 }
 
 /* Root variable declarations for colors and font weights */
@@ -229,7 +229,7 @@ ul {
   .signup__image {
     max-width: 100%;
     order: 2;
-    content: url("/assets/images/illustration-sign-up-desktop.svg");
+    content: url("./assets/images/illustration-sign-up-desktop.svg");
   }
 
   .signup__container {
