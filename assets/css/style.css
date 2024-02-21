@@ -1,0 +1,280 @@
+/* Font declarations for Roboto Regular and Bold */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto Regular"),
+    url("/assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"),
+    url("/assets/fonts/Roboto-Bold.ttf") format("truetype");
+}
+
+/* Root variable declarations for colors and font weights */
+:root {
+  --light-red: hsl(4, 100%, 67%);
+  --lighter-red: hsla(4, 100%, 67%, 0.3);
+  --dark-grey: hsl(234, 29%, 20%);
+  --light-grey: hsl(235, 18%, 26%);
+  --white: #fff;
+  --bold: 700;
+  --regular: 400;
+}
+
+/* Global styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: var(--regular);
+}
+
+/* Styles for the signup section */
+.signup__image {
+  width: 100%;
+}
+
+.signup__container {
+  padding: 1.5rem;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.signup__title {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--dark-grey);
+}
+
+.signup__description {
+  font-size: 16px;
+  font-weight: var(--regular);
+  color: var(--light-grey);
+  margin-right: 3rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.signup__list li {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin: 0 3rem 2rem 0;
+  align-items: center;
+  font-weight: var(--bold);
+}
+
+/* Form-related styles */
+.form__title {
+  color: var(--dark-grey);
+  font-weight: var(--bold);
+  font-size: 14px;
+}
+
+.email__input {
+  width: 100%;
+  height: 3.5rem;
+  padding: 0 1rem;
+  border-radius: 10px;
+  border: solid 1px var(--light-grey);
+  cursor: pointer;
+}
+
+#email-input:focus,
+#email-input:hover {
+  outline: none;
+}
+
+/* Button styles */
+.button {
+  text-decoration: none;
+  color: var(--white);
+  background: var(--dark-grey);
+  font-weight: var(--bold);
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: linear-gradient(
+    126deg,
+    rgba(255, 87, 127, 1) 3%,
+    rgba(255, 98, 87, 1) 42%,
+    rgba(252, 127, 26, 1) 100%
+  );
+}
+
+/* Error message styles */
+.error__title {
+  color: var(--light-red);
+  display: none;
+}
+
+/* Form header styles */
+.form__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Error message container styles */
+.error {
+  background-color: var(--lighter-red);
+  border-color: var(--light-red);
+}
+
+.error::placeholder {
+  color: var(--light-red);
+}
+
+/* Success message section styles */
+.success {
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  display: none;
+}
+
+.success img {
+  width: 20%;
+}
+
+.success div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 75%;
+  font-size: 18px;
+  margin-top: 10rem;
+}
+
+/* Animation styles for error and success */
+.error-animation {
+  animation: shake 0.5s ease-in-out;
+}
+
+.success-animation {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25%,
+  75% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 992px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--dark-grey);
+  }
+
+  .signup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 20px;
+
+    -webkit-box-shadow: -1px 1px 17px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 1px 17px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 1px 17px -1px rgba(0, 0, 0, 0.75);
+  }
+
+  .signup__image {
+    max-width: 100%;
+    order: 2;
+    content: url("/assets/images/illustration-sign-up-desktop.svg");
+  }
+
+  .signup__container {
+    max-width: 100%;
+    padding: 1rem;
+    margin-right: 2rem;
+  }
+
+  .signup__description {
+    margin-right: 0;
+  }
+
+  .signup__list li {
+    gap: 0.5rem;
+    margin: 0 0 1rem 0;
+  }
+  .success {
+    display: none;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin: auto;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: -1px 1px 17px -1px rgba(0, 0, 0, 0.75);
+    height: 55%;
+  }
+
+  .success img {
+    width: 10%;
+  }
+
+  .signup__description {
+    margin-bottom: 1rem;
+  }
+
+  .success div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 75%;
+    font-size: 18px;
+    margin-top: 0;
+  }
+}

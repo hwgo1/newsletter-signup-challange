@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Displays the site properly based on the user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <script src="/assets/js/app.js" defer></script>
+    <!-- Defer script execution until HTML parsing is complete -->
+    <title>Frontend Mentor | Newsletter sign-up form</title>
+  </head>
+  <body>
+    <!-- Success message section -->
+    <div class="success" id="success">
+      <div>
+        <img src="/assets/images/icon-success.svg" alt="" />
+        <h1 class="success__title">Thanks for subscribing</h1>
+        <p class="success__description">
+          A confirmation has been sent to <bold>ash@loremcompany.com</bold>.
+          Please open it and click the button inside to confirm your
+          subscription
+        </p>
+      </div>
+      <a href="#" class="button" id="dismiss">Dismiss message</a>
+    </div>
+
+    <!-- Signup form section -->
+    <div class="signup grid__container" id="signup">
+      <img
+        class="signup__image"
+        src="/assets/images/illustration-sign-up-mobile.svg"
+        alt=""
+      />
+      <div class="signup__container">
+        <h1 class="signup__title">Stay updated!</h1>
+        <span class="signup__description"
+          >Join 60,000+ product managers receiving monthly updates on:</span
+        >
+
+        <!-- List of updates -->
+        <div class="signup__list">
+          <ul>
+            <li>
+              <img src="assets/images/icon-list.svg" alt="" />
+              <span class="list__description"
+                >Product discovery and building what matters</span
+              >
+            </li>
+            <li>
+              <img src="assets/images/icon-list.svg" alt="" />
+              <span class="list__description"
+                >Measuring to ensure updates are a success</span
+              >
+            </li>
+            <li>
+              <img src="assets/images/icon-list.svg" alt="" />
+              <span class="list__description">And much more!</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Email signup form -->
+        <div class="form__container">
+          <form class="signup__form" id="form">
+            <div class="form__header">
+              <span class="form__title">Email address</span>
+              <span class="form__title error__title">Valid email required</span>
+            </div>
+            <div></div>
+            <input
+              type="text"
+              name=""
+              class="email__input"
+              id="email-input"
+              placeholder="email@company.com"
+            />
+          </form>
+        </div>
+
+        <!-- Subscribe button -->
+        <span class="button" id="subscribe">
+          Subscribe to monthly newsletter
+        </span>
+      </div>
+    </div>
+  </body>
+</html>
