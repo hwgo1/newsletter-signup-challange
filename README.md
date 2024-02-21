@@ -1,5 +1,5 @@
 # Frontend Mentor - Formulário de registro de newsletter
-[![My Skills](https://skillicons.dev/icons?i=js,html,css,tailwind)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=js,html,css)](https://skillicons.dev)
 ![Form](/assets/images/form-print.png)
 
 Este projeto consiste em um formulário de inscrição para newsletter, desenvolvido como desafio do site [Frontend Mentor](https://www.frontendmentor.io/). O objetivo é criar uma interface responsiva e interativa para os usuários se inscreverem na newsletter.
