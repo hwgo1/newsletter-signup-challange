@@ -229,7 +229,7 @@ ul {
   .signup__image {
     max-width: 100%;
     order: 2;
-    content: url("/assets/images/illustration-sign-up-desktop.svg");
+    content: url("../../assets/images/illustration-sign-up-desktop.svg");
   }
 
   .signup__container {
